@@ -24,8 +24,8 @@ Vue.use(notify, {
       color: "green"
     },
     dialog: {
-			width: 400
-		}
+      width: 400
+    }
   }
 });
 ```
