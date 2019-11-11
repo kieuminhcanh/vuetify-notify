@@ -8,9 +8,9 @@
         v-if="data.type"
         >{{ data.type | icon }}</v-icon
       >
-      <v-card-title class="justify-center headline" v-if="data.title">
-        {{ data.title }}
-      </v-card-title>
+      <v-card-title class="justify-center headline" v-if="data.title">{{
+        data.title
+      }}</v-card-title>
       <v-card-text>
         {{ data.text }}
         <v-text-field
@@ -92,12 +92,15 @@ export default {
   methods: {
     show(data, options) {
       return new Promise((resolve, reject) => {
-        this.promise = Object.assign({}, { resolve, reject });
+        if (this.model) this.model = false;
+        this.$nextTick(() => {
+          this.promise = Object.assign({}, { resolve, reject });
 
-        this.data = { ...this.data, ...data };
-        this.options = { ..._options, ...options };
-        console.log(this.data, this.options);
-        this.model = true;
+          this.data = { ...this.data, ...data };
+          this.options = { ..._options, ...options };
+          console.log(this.data, this.options);
+          this.model = true;
+        });
       });
     },
     yesPrompt() {

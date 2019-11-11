@@ -34,10 +34,13 @@ export default {
   methods: {
     show(text, options) {
       return new Promise((resolve, reject) => {
-        this.promise = Object.assign({}, { resolve, reject });
-        this.text = text;
-        this.options = Object.assign(_options, options);
-        this.model = true;
+        if (this.model) this.model = false;
+        this.$nextTick(() => {
+          this.promise = Object.assign({}, { resolve, reject });
+          this.text = text;
+          this.options = Object.assign(_options, options);
+          this.model = true;
+        });
       });
     },
     close() {
