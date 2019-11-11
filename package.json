@@ -1,0 +1,18 @@
+{
+	"name": "vuetify-notify",
+	"version": "1.0.0",
+	"description": "Vuetify Notify is a Vue plugin to provide simple yet fully customisable notifications.",
+	"main": "index.js",
+	"author": "Canh Kieu <minhcanhdn0704@gmail.com> (https://github.com/canhkieu)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/canhkieu/vuetify-notify"
+	},
+	"keywords": [
+		"vuetify",
+		"notify",
+		"alert",
+		"promt"
+	],
+	"license": "MIT"
+}
