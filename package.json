@@ -1,6 +1,6 @@
 {
 	"name": "vuetify-notify",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Vuetify Notify is a Vue plugin to provide simple yet fully customisable notifications.",
 	"main": "index.js",
 	"author": "Canh Kieu <minhcanhdn0704@gmail.com> (https://github.com/canhkieu)",
