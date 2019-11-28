@@ -30,6 +30,34 @@ Vue.use(notify, {
 });
 ```
 
+## Nuxt Setup
+
+**plugins/toast.js**
+```
+import Vue from 'vue'
+import VuetifyNotify from 'vuetify-notify'
+
+export default ({ app }, inject) => {
+  window.onNuxtReady(() => {
+    Vue.use(VuetifyNotify, {
+      vuetify: app.vuetify,
+      container: '__nuxt',
+      options: {
+        toast: {
+          x: 'right',
+          y: 'bottom',
+          color: 'green'
+        },
+        dialog: {
+          width: 400
+        }
+      }
+    })
+  })
+}
+
+```
+
 ## Use
 
 ```

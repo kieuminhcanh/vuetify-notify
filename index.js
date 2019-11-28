@@ -15,11 +15,9 @@ export default {
 
     Vue.prototype.$nextTick(() => {
       Vue.prototype.$notify = instance.$mount();
-      setTimeout(() => {
-        document
-          .getElementById(options.container || "app")
-          .appendChild(instance.$el);
-      }, 1000);
+      document
+        .getElementById(options.container || "app")
+        .appendChild(instance.$el);
     });
   }
 };
