@@ -98,7 +98,6 @@ export default {
 
           this.data = { ...this.data, ...data };
           this.options = { ..._options, ...options };
-          console.log(this.data, this.options);
           this.model = true;
         });
       });
@@ -113,7 +112,7 @@ export default {
       this.close();
     },
     no() {
-      this.promise.resolve(false);
+      this.promise.reject(false);
       this.close();
     },
     close() {
