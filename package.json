@@ -14,5 +14,6 @@
 		"alert",
 		"promt"
 	],
-	"license": "MIT"
+	"license": "MIT",
+	"types": "index.d.ts"
 }
