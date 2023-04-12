@@ -1,5 +1,7 @@
 # Guild
 
+**This plugin is use for Nuxt 2. For Nuxt 3, please use https://github.com/kieuminhcanh/vuetify-notifier**
+
 ## Install
 
 ```
