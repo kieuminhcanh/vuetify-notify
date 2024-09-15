@@ -1,17 +1,25 @@
 <template>
   <v-snackbar
+    v-model="model"
     :bottom="options.y === 'bottom'"
     :color="options.color"
     :left="options.x === 'left'"
     :right="options.x === 'right'"
     :timeout="options.timeout"
     :top="options.y === 'top'"
-    v-model="model"
   >
     {{ text }}
-    <v-btn @click="close" icon>
-      <v-icon>mdi-close</v-icon>
-    </v-btn>
+
+     <template v-slot:action="{ attrs }">
+        <v-btn
+          dark
+          text
+          v-bind="attrs"
+          @click="close"
+      >
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
+    </template>
   </v-snackbar>
 </template>
 <script>
